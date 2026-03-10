@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
 
 function ItemForm({ onItemFormSubmit }) {
+  // Controlled states for name and category inputs
   const [name, setName] = useState("");
   const [category, setCategory] = useState("Produce");
 
+  // Handles form submission, creates a new item with unique ID, and resets state
   function handleSubmit(event) {
     event.preventDefault();
     const newItem = {
